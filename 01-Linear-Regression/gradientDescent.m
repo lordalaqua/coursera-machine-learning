@@ -18,7 +18,7 @@ for iter = 1:num_iters
     %
 
     new_theta = zeros(size(theta));
-    for i = 1:2
+    for i = 1:size(theta,1)
       new_theta(i) = theta(i) - alpha * (1/m) * sum((X*theta-y).*X(:,i));
     end
     theta = new_theta;
